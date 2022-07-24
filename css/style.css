@@ -16,7 +16,7 @@
 body {
     min-height: 100vh;
     position: relative;
-    padding-bottom: 320px;    
+    padding-bottom: 420px;    
 }
 
 .menu {
@@ -246,6 +246,169 @@ footer {
     width: 20px;
 }
 
+.formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: var(--rojo);
+}
+
+#form {
+    display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    flex-direction: column;
+}
+
+#form h2{
+    text-align: center;
+    color: #3E363F;
+    font-weight: bolder;
+    font-size: 30px;
+    margin: 20px 0px;
+    color: white;
+}
+
+#form input{
+    width: 400px;
+    height: 50px;
+    text-align: center;
+    font-size: 18px;
+    margin: 15px 0px 0px 0px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bolder;
+    outline: none;
+}
+
+#form textarea{
+    width: 400px;
+    height: 100px;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    margin: 15px 0px 0px 0px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bolder;
+    outline: none;
+}
+
+#form input::placeholder{
+    font-weight: normal;
+}
+
+input:hover::placeholder {
+    color: var(--rojo);
+}
+
+#form textarea::placeholder{
+    font-weight: normal;
+}
+
+textarea:hover::placeholder {
+    color: var(--rojo);
+}
+
+#form button {
+    color: var(--rojo);
+    margin: 30px 0px;
+    width: 130px;
+    height: 35px;
+    font-size: 19.5px;
+    font-weight: bolder;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+#form button:hover {
+    transform: scale(1.1);
+}
+
+.text-final {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 220px;
+    padding: 90px;
+    text-align: center;
+    font-size: 23px;
+    margin-top: 30px;
+    margin-bottom: 45px;
+    animation-duration: 1.5s;
+    animation-name: slidein2;
+}
+
+@keyframes slidein2 {
+    from {
+      margin-left: 100%;
+      width: 300%
+    }
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+}
+
+.text-final b {
+    color: #DD403A;
+    font-weight: bolder;
+}
+
+.mapa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.ubi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: auto;
+}
+
+.m1 {
+    position: relative;
+    width: 30%;
+}
+
+.m1 img{
+    width: 400px;
+}
+
+.m1 img:hover{
+    transform: scale(1.06);
+    transition: transform 1s;
+}
+
+.m2 {
+    width: 70%;
+}
+
+.m2 h2{
+    float: right;
+    margin-bottom: 10px;
+    color: var(--rojo);
+    font-size: 40px;
+}
+
+.m2 iframe {
+    width: 485px; 
+    height: 400px;
+    border: none;
+    border-radius: 30px;
+}
+
 @media only screen and (min-device-width: 200px) and (max-width: 956px) {
     .tarjetas {
         display: flex;
@@ -314,7 +477,7 @@ footer {
     body {
         min-height: 100vh;
         position: relative;
-        padding-bottom: 540px;    
+        padding-bottom: 680px;    
     }
     footer {
         width: 100%;
@@ -333,10 +496,33 @@ footer {
         margin-top: 140px;
         gap: 80px;
     }
+    .ubi {
+        width: 80%;
+        height: auto;
+    }
+    .m1 img{
+        width: 250px;
+    }    
+    .m2 h2{
+        float: right;
+        margin-bottom: 10px;
+        color: var(--rojo);
+        font-size: 30px;
+    }
+    .m2 iframe {
+        width: 100%; 
+        height: 180px;
+        margin-bottom: 35px;
+    }       
 }
 
 
 @media only screen and (min-device-width: 180px) and (max-width: 570px) {
+    body {
+        min-height: 100vh;
+        position: relative;
+        padding-bottom: 700px;    
+    }
     .menu {
         display: flex;
         justify-content: center;
@@ -345,6 +531,10 @@ footer {
         height: 180px;
         gap: 30px;
         margin-bottom: 15px;
+    }
+    .banner h1 {
+        font-size: 270%;
+        font-weight: bolder;
     }
     .c2 {
         display: flex;
@@ -370,5 +560,66 @@ footer {
         font-weight: bold;
         cursor: pointer;
     }
+    #form input{
+        width: 250px;
+    }
+    #form textarea{
+        width: 250px;
+        height: 160px;
+    }    
+    .ubi {
+        width: 80%;
+    }
+    .m1 {
+        width: 30%;
+    }
+    .m1 img{
+        width: 200px;
+    }
+    .m2 h2{
+        float: right;
+        margin-bottom: 10px;
+        color: var(--rojo);
+        font-size: 25px;
+        margin-left: 3px;
+    }
+    .m2 iframe {
+        width: 100%; 
+        height: 180px;
+        margin-bottom: 35px;
+    }    
+    .text-final {
+        height: auto;
+        margin-bottom: -20px;
+    }    
 }
+
+@media only screen and (min-device-width: 621px) and (max-width: 1100px) { 
+    .ubi {
+        width: 70%;
+    }
+    .m1 {
+        width: 30%;
+    }
+    .m1 img{
+        width: 300px;
+    }
+    .m2 h2{
+        float: right;
+        margin-bottom: 10px;
+        color: var(--rojo);
+        font-size: 32px;
+        margin-left: 3px;
+    }
+    .m2 iframe {
+        width: 100%; 
+        height: 290px;
+        margin-bottom: 45px;
+    }    
+    .text-final {
+        height: auto;
+        margin-bottom: -20px;
+    }    
+}
+
 

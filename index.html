@@ -75,6 +75,71 @@
             </div>
         </div>               
     </div>
+    <div class="formulario">
+        <form id="form">        
+            <h2>Domicilios</h2>
+            <input type="text" placeholder="Digita tu nombre" name="name" id="nombre">
+            <input type="email" placeholder="Digita correo de contacto" name="email" id="correo">
+            <textarea name="textarea" id="pedido" rows="3" cols="50" placeholder="Digita los productos"></textarea>
+            <button type="submit">PEDIR</button>
+        </form>
+    </div>
+    <script>
+        let contador=0;
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("form").addEventListener('submit', validarFormulario); 
+        });
+        function validarFormulario(evento) {
+        evento.preventDefault();
+            let nombre = document.getElementById('nombre').value;
+            let correo = document.getElementById('correo').value;
+            let pedido = document.getElementById('pedido').value;
+            if(nombre.length == 0) {
+                contador++;
+            }
+            if(correo.length == 0) {
+                contador++;
+            }
+            if(pedido.length == 0) {
+                contador++;
+            }            
+            switch(contador){
+                case 0:
+                    alert("Gracias por llenar el formulario, recuerda que los datos digitados no se almacenaran, solo es una alerta de que le has dado al boton enviar. 😄");
+                    break;  
+                case 1:
+                    alert("Te falta 1 campo por llenar");
+                    break;
+                case 2:
+                    alert("Te faltaron 2 campos por llenar");
+                    break;
+                case 3:
+                    alert("Te faltaron 3 campos por llenar");
+                    break;    
+            }
+            form.reset();
+            this.submit();
+        }
+    </script>
+    <div class="text-final">
+        <p>
+            Si deseas, tambien puedes <b>visitarnos</b>, estamos ubicados<br>en el norte de
+            la ciudad por cada una de tus <b>compras</b>, recibe un cupon de descuento redimible <br>en 
+            nuestros productos, además ten en cuenta que por <b>6</b> compras <br>obten un obsequio para ti
+            y tu mascota. 
+        </p>
+    </div>    
+    <div class="mapa">
+        <div class="ubi">
+            <div class="m1">
+                <img src="./img/perro.png">
+            </div>
+            <div class="m2">
+                <h2>Nuestra tienda</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.3121764433963!2d-74.05201029968862!3d4.715734492823335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f85489cae849b%3A0xb26b5f0d60ef709b!2zU29hdGFtYSwgVXNhcXXDqW4sIEJvZ290w6E!5e0!3m2!1ses!2sco!4v1658642045713!5m2!1ses!2sco" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
     <footer>
         <div class="contacto" id="contacto">
             <div class="box">
